@@ -1,0 +1,18 @@
+MaterialDef MotionBlur {
+
+    MaterialParameters {
+        Texture2D Texture;
+        Float MinimumBlurRadius;
+        Int NumSamples;
+    }
+
+    Technique {
+        VertexShader GLSL100: Shaders/MotionBlurShader.vert
+        FragmentShader GLSL100: Shaders/MotionBlurShader.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+    }
+
+}

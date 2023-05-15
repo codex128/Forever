@@ -1,0 +1,20 @@
+MaterialDef Simple {
+    MaterialParameters {
+        Float Alpha
+        Vector4 Color
+        Texture2D Texture
+    }
+    Technique {
+        VertexShader GLSL100: Shaders/FadeShader.vert
+        FragmentShader GLSL100: Shaders/FadeShader.frag
+        
+        Defines {
+            COLOR : Color
+            TEXTURE : Texture
+        }
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+    }
+}

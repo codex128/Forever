@@ -1,0 +1,25 @@
+MaterialDef Panel {
+    
+    MaterialParameters {
+        Vector4 BaseColor;
+        Texture2D AlphaMap;
+        Texture2D NoiseMap;
+        Vector2 NoiseOffset;
+        Float NoiseFactor;
+        Vector3 VertOffset;
+        Float Alpha;
+    }
+
+    Technique {
+        VertexShader GLSL100: Shaders/PanelShader.vert
+        FragmentShader GLSL100: Shaders/PanelShader.frag
+
+        Defines {
+            NOISE : NoiseMap
+        }
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+    }
+
+}

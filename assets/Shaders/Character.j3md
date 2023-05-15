@@ -1,0 +1,14 @@
+MaterialDef Character {
+    MaterialParameters {
+        Vector4 Color
+        Vector3 VertOffset
+    }
+    Technique {
+        VertexShader GLSL100: Shaders/CharacterShader.vert
+        FragmentShader GLSL100: Shaders/CharacterShader.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+    }
+}

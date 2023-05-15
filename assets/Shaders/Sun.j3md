@@ -1,0 +1,20 @@
+MaterialDef Sun {
+    
+    MaterialParameters {
+        Vector4 Color;
+        Texture2D BaseTexture;
+        Texture2D OverlayTexture;
+        Float Alpha;
+        Float Theta;
+    }
+
+    Technique {
+        VertexShader GLSL100: Shaders/SunShader.vert
+        FragmentShader GLSL100: Shaders/SunShader.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+    }
+
+}

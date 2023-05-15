@@ -1,0 +1,10 @@
+
+dialog1: Dialog(
+    "Well, hello world!",
+    "Don't fall!",
+    "Jump to nearby threads if the one you're on fails you.",
+    "You have exactly one jump after landing on a platform, use it wisely!",
+    "Jumping a double gap is easy, but watch out for those triple gaps!",
+    "Use nearby ramps to get boost into the air.",
+    "Well, goodbye world!",
+);

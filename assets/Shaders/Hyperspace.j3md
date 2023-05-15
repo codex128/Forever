@@ -1,0 +1,15 @@
+MaterialDef Hyperspace {
+    MaterialParameters {
+        Texture2D Texture
+        Vector2 Offset1
+        Vector2 Offset2
+    }
+    Technique {
+        VertexShader GLSL100: Shaders/HyperspaceShader.vert
+        FragmentShader GLSL100: Shaders/HyperspaceShader.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+    }
+}

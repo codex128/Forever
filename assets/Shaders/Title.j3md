@@ -1,0 +1,19 @@
+MaterialDef Title {
+    
+    MaterialParameters {
+        Vector4 Color;
+        Texture2D Texture;
+        Vector3 VertOffset;
+        Float AlphaFactor;
+    }
+
+    Technique {
+        VertexShader GLSL100: Shaders/TitleShader.vert
+        FragmentShader GLSL100: Shaders/TitleShader.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+    }
+
+}
