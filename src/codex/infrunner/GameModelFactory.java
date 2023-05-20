@@ -86,7 +86,6 @@ public class GameModelFactory extends SimpleModelFactory {
 	}
 	private Spatial createPanel(ModelTools tools) {
 		Color color = ModelFactory.getArgumentComponent(tools.ed, tools.entity, new Color(ColorRGBA.randomColor()));
-		Position position = ModelFactory.getArgumentComponent(tools.ed, tools.entity, new Position());
 		Spatial panel = tools.assetManager.loadModel("Models/panel.j3o");
 		panel.setMaterial(createPanelMaterial(tools, color.getColor()));
 		Spatial geometry = ((Node)panel).getChild(0);
@@ -98,7 +97,6 @@ public class GameModelFactory extends SimpleModelFactory {
 		alpha.setInterpolationMode(InterpolationMode.LINEAR);
 		geometry.addControl(alpha);
 		VertBumpControl vert = new VertBumpControl("VertOffset");
-		//vert.setOffset(new Vector3f(Math.min(Math.abs(position.getPosition().x), position.getPosition().z)*Math.signum(position.getPosition().x), 0f, 0f));
 		vert.setOffset(new Vector3f());
 		geometry.addControl(vert);
 		return panel;

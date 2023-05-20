@@ -106,6 +106,7 @@ public class SceneGeneratorState extends ESAppState implements Listenable<SceneG
 		PanelBatchBuilder.ThreadGroupStatistics stats = new PanelBatchBuilder.ThreadGroupStatistics(threads);
 		Vector3f runnerPos = ed.getComponent(runner.getRunnerId(), Position.class).getPosition();
 		if (runnerPos.y < spawnMain.y+leveloffset*PANEL_SIZE.z+stats.lowest.get3DLocation().y-PANEL_SIZE.z*5) {
+			// a concurrent modification exception occured here
 			notifyListeners(l -> l.onRunnerDeath(runner));
 			setLevelOffset((int)(runnerPos.y/SceneGeneratorState.PANEL_SIZE.z)-5);
 			spawnMain.setX(runnerPos.x-PANEL_SIZE.x*threads.length/2);
@@ -183,7 +184,7 @@ public class SceneGeneratorState extends ESAppState implements Listenable<SceneG
 		bloom.setBloomIntensity(2f);
 		bloom.setBlurScale(1.5f);
 		//bloom.setExposurePower(10f);
-		fpp.addFilter(bloom);
+		//fpp.addFilter(bloom);
 		getApplication().getViewPort().addProcessor(fpp);
 	}
 	private void createPanelBatch(Vector3f location) {

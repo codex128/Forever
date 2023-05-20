@@ -22,9 +22,7 @@ import com.jme3.font.BitmapFont;
 import com.jme3.font.BitmapText;
 import com.jme3.math.ColorRGBA;
 import com.jme3.scene.Node;
-import com.simsilica.lemur.GuiGlobals;
 import com.simsilica.lemur.input.FunctionId;
-import com.simsilica.lemur.input.InputMapper;
 import com.simsilica.lemur.input.InputState;
 import com.simsilica.lemur.input.StateFunctionListener;
 
@@ -41,7 +39,6 @@ public class GameState extends ESAppState implements StateFunctionListener,
 	
 	SceneGeneratorState generator;
 	SceneGeneratorListener hudUpdater;
-	DialogAppState dialog;
 	
 	@Override
 	protected void init(Application app) {
@@ -51,12 +48,6 @@ public class GameState extends ESAppState implements StateFunctionListener,
 		initializeMusic();
 		createHUD();
 		initializeInput();
-		
-//		if (completions > 0) {
-//			J3map source = J3map.openJ3map(assetManager.loadAsset("Interface/Dialog.j3map"));
-//			dialog = new DialogAppState(source.getProperty(Dialog.class, "dialog1"));
-//			getStateManager().attach(dialog);
-//		}
 	}
 	@Override
 	protected void cleanup(Application app) {
@@ -64,9 +55,6 @@ public class GameState extends ESAppState implements StateFunctionListener,
 		generator.removeListener(hudUpdater);
 		generator.setStepTagArray(null);
 		visuals.removeScene("game_gui");
-		if (dialog != null) {
-			getStateManager().detach(dialog);
-		}
 	}
 	@Override
 	protected void onEnable() {}

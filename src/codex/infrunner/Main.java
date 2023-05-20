@@ -39,9 +39,6 @@ public class Main extends SimpleApplication {
 		GuiGlobals.initialize(this);
 		Functions.initialize(GuiGlobals.getInstance().getInputMapper());
 		
-		J3mapFactory.registerAllProcessors(DialogProcessor.class);
-		assetManager.registerLoader(J3mapFactory.class, "j3map");
-		
 		VisualState visuals = new VisualState();
 		GameModelFactory mainfactory = new GameModelFactory();
 		visuals.registerModelFactory("main_factory", mainfactory);
