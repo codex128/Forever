@@ -6,6 +6,7 @@ Infinite-runner style game built with JMonkeyEngine 3.
 # Instructions
 * Move left/right with the arrow keys or A/D.
 * Jump with space.
+* The game is infinite, but it provides some satisfaction every 1000 steps.
 
 # Platform Support
 Linux is supported.<br>
