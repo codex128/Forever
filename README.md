@@ -1,6 +1,8 @@
 # Forever
 Infinite-runner style game built with JMonkeyEngine 3.
 
+![gameplay](https://github.com/codex128/Forever/blob/master/assets/Release%20Resources/forever%20gameplay.png)
+
 # Instructions
 * Move left/right with the arrow keys or A/D.
 * Jump with space.
