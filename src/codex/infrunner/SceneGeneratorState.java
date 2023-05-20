@@ -185,7 +185,7 @@ public class SceneGeneratorState extends ESAppState implements Listenable<SceneG
 		bloom.setBlurScale(1.5f);
 		//bloom.setExposurePower(10f);
 		//fpp.addFilter(bloom);
-		getApplication().getViewPort().addProcessor(fpp);
+		//getApplication().getViewPort().addProcessor(fpp);
 	}
 	private void createPanelBatch(Vector3f location) {
 		EntityId[] batch = builder.buildPanelBatch(ed, location, threads, PANEL_SIZE, builder.getGlobalStep(), leveloffset);
