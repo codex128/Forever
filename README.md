@@ -19,3 +19,6 @@ MacOS and Windows are supposed to work, but are untested.
 * [Zay-ES 1.4+](https://github.com/jMonkeyEngine-Contributions/zay-es)
 * [Lemur 1.16+](https://github.com/jMonkeyEngine-Contributions/Lemur)
 * JDK 8+
+
+# Credits
+Music by ISAo at [airyluvs.com](https://airyluvs.com/)
